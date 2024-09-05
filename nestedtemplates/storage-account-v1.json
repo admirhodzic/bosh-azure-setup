@@ -26,9 +26,9 @@
       "type": "string",
       "value": "[variables('storageAccountName')]"
     },
-    "resourceId": {
+    "storageAccountKey": {
       "type": "string",
-      "value": "resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))"
+      "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value]"
     },
     "blobEndpoint": {
       "type": "string",
