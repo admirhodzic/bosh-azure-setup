@@ -242,7 +242,7 @@
     "virtualNetworkName": "boshvnet-crp",
     "virtualNetworkAddressSpace": "10.0.0.0/16",
     "subnetNameForBosh": "Bosh",
-    "storageAccountName": "[concat(uniqueString(resourceGroup().id), 'cfdefaultsaado')]",
+    "storageAccountName": "[concat(uniqueString(resourceGroup().id), 'cfdefaultsa')]",
     "subnetAddressRangeForBosh": "10.0.0.0/24",
     "subnetRefForBosh": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetNameForBosh'))]",
     "subnetNameForCloudFoundry": "CloudFoundry",

@@ -7,7 +7,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniqueString(resourceGroup().id), 'cfdefaultsaado')]"
+    "storageAccountName": "[concat(uniqueString(resourceGroup().id), 'cfdefaultsa')]"
   },
   "resources": [
     {
