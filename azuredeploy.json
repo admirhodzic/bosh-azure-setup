@@ -105,6 +105,12 @@
         "description": "Access key of the storage account"
       }
     },
+    "storageAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the storage account"
+      }
+    },
     "certificate": {
       "type": "securestring",
       "defaultValue": "",
@@ -694,7 +700,7 @@
               "NSG_NAME_FOR_CLOUD_FOUNDRY": "[variables('cfNetworkSecurityGroup')]",
               "SUBSCRIPTION_ID": "[subscription().subscriptionId]",
               "RESOURCE_GROUP_NAME": "[resourceGroup().name]",
-              "DEFAULT_STORAGE_ACCOUNT_NAME": "[reference('Microsoft.Resources/deployments/create-storage-account').outputs.storageAccountName.value]",
+              "DEFAULT_STORAGE_ACCOUNT_NAME": "[parameters('storageAccountName')]",
               "DEFAULT_STORAGE_ACCESS_KEY": "[parameters('storageAccountKey')]",
               "ADMIN_USER_NAME": "[parameters('adminUsername')]",
               "ENVIRONMENT": "[parameters('environment')]",
