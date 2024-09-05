@@ -53,9 +53,9 @@ if [ "$environment" = "AzureStack" ]; then
   export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   az cloud update --profile 2017-03-09-profile
 fi
-az storage container create --name bosh --account-key ${default_storage_access_key} --acount-name ${default_storage_account}
-az storage container create --name stemcell --account-key ${default_storage_access_key} --acount-name ${default_storage_account}
-az storage table create --name stemcells --account-key ${default_storage_access_key} --acount-name ${default_storage_account}
+az storage container create --name bosh --account-key ${default_storage_access_key} --account-name ${default_storage_account}
+az storage container create --name stemcell --account-key ${default_storage_access_key} --account-name ${default_storage_account}
+az storage table create --name stemcells --account-key ${default_storage_access_key} --account-name ${default_storage_account}
 
 username=$(get_setting ADMIN_USER_NAME)
 home_dir="/home/$username"
