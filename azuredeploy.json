@@ -765,7 +765,7 @@
           "osDisk": {
             "name": "osdisk",
             "vhd": {
-              "uri": "[concat(reference('Microsoft.Resources/deployments/create-storage-account').outputs.blobEndpoint.value, variables('vmStorageAccountContainerName'), '/', parameters('vmName'), '-osdisk.vhd')]"
+              "uri": "[concat('https://',parameters('storageAccountName'),'.blob.',parameters('coreUriAzure'),'/', variables('vmStorageAccountContainerName'), '/', parameters('vmName'), '-osdisk.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
