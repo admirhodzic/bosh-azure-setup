@@ -28,12 +28,6 @@
     },
     "coreUriAzure": {
       "value": "core.windows.net"
-    },
-    "storageAccountName": {
-      "value": "GEN-PASSWORD"
-    },
-    "storageAccountKey": {
-      "value": ""
     }
   }
 }
